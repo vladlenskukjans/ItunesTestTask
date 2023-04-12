@@ -13,6 +13,8 @@
 		24209B0B29E6B3CC00EF8909 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0A29E6B3CC00EF8909 /* UserInfoViewController.swift */; };
 		24209B0E29E6B42500EF8909 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0D29E6B42500EF8909 /* AlbumsTableViewCell.swift */; };
 		24209B1029E6B43D00EF8909 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0F29E6B43D00EF8909 /* SongsCollectionViewCell.swift */; };
+		24209B1329E6B52E00EF8909 /* UIStackView+Extens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B1229E6B52D00EF8909 /* UIStackView+Extens.swift */; };
+		24209B1529E6B56200EF8909 /* UIViewController+Extens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B1429E6B56200EF8909 /* UIViewController+Extens.swift */; };
 		24891B7E29B724B500760765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B7D29B724B500760765 /* AppDelegate.swift */; };
 		24891B8029B724B500760765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B7F29B724B500760765 /* SceneDelegate.swift */; };
 		24891B8229B724B500760765 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B8129B724B500760765 /* AuthViewController.swift */; };
@@ -45,6 +47,8 @@
 		24209B0A29E6B3CC00EF8909 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		24209B0D29E6B42500EF8909 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		24209B0F29E6B43D00EF8909 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
+		24209B1229E6B52D00EF8909 /* UIStackView+Extens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extens.swift"; sourceTree = "<group>"; };
+		24209B1429E6B56200EF8909 /* UIViewController+Extens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extens.swift"; sourceTree = "<group>"; };
 		24891B7A29B724B500760765 /* ItunesTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24891B7D29B724B500760765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24891B7F29B724B500760765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		24209B1129E6B4FE00EF8909 /* Extnsions */ = {
+			isa = PBXGroup;
+			children = (
+				24209B1229E6B52D00EF8909 /* UIStackView+Extens.swift */,
+				24209B1429E6B56200EF8909 /* UIViewController+Extens.swift */,
+			);
+			path = Extnsions;
+			sourceTree = "<group>";
+		};
 		24891B7129B724B500760765 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 			children = (
 				24209B0C29E6B3FA00EF8909 /* Cells */,
 				24891BAD29B7250100760765 /* Controllers */,
+				24209B1129E6B4FE00EF8909 /* Extnsions */,
 				24891BAE29B7256400760765 /* Resorces */,
 			);
 			path = ItunesTestTask;
@@ -287,8 +301,10 @@
 				24209B0B29E6B3CC00EF8909 /* UserInfoViewController.swift in Sources */,
 				24209B0929E6B39600EF8909 /* DetailAlbumViewController.swift in Sources */,
 				24209B0E29E6B42500EF8909 /* AlbumsTableViewCell.swift in Sources */,
+				24209B1329E6B52E00EF8909 /* UIStackView+Extens.swift in Sources */,
 				24891B7E29B724B500760765 /* AppDelegate.swift in Sources */,
 				24209B1029E6B43D00EF8909 /* SongsCollectionViewCell.swift in Sources */,
+				24209B1529E6B56200EF8909 /* UIViewController+Extens.swift in Sources */,
 				24209B0529E6B34F00EF8909 /* SignUpViewController.swift in Sources */,
 				24891B8029B724B500760765 /* SceneDelegate.swift in Sources */,
 				24209B0729E6B37700EF8909 /* AlbumsViewController.swift in Sources */,
