@@ -10,12 +10,9 @@
 		24891B7E29B724B500760765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B7D29B724B500760765 /* AppDelegate.swift */; };
 		24891B8029B724B500760765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B7F29B724B500760765 /* SceneDelegate.swift */; };
 		24891B8229B724B500760765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B8129B724B500760765 /* ViewController.swift */; };
-		24891B8529B724B500760765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8329B724B500760765 /* Main.storyboard */; };
 		24891B8729B724B800760765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8629B724B800760765 /* Assets.xcassets */; };
 		24891B8A29B724B800760765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8829B724B800760765 /* LaunchScreen.storyboard */; };
 		24891B9529B724B900760765 /* ItunesTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B9429B724B900760765 /* ItunesTestTaskTests.swift */; };
-		24891B9F29B724B900760765 /* ItunesTestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B9E29B724B900760765 /* ItunesTestTaskUITests.swift */; };
-		24891BA129B724B900760765 /* ItunesTestTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891BA029B724B900760765 /* ItunesTestTaskUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,15 +37,12 @@
 		24891B7D29B724B500760765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24891B7F29B724B500760765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24891B8129B724B500760765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24891B8429B724B500760765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24891B8629B724B800760765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24891B8929B724B800760765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		24891B8B29B724B800760765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24891B8B29B724B800760765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		24891B9029B724B900760765 /* ItunesTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24891B9429B724B900760765 /* ItunesTestTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesTestTaskTests.swift; sourceTree = "<group>"; };
 		24891B9A29B724B900760765 /* ItunesTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		24891B9E29B724B900760765 /* ItunesTestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesTestTaskUITests.swift; sourceTree = "<group>"; };
-		24891BA029B724B900760765 /* ItunesTestTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesTestTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +75,6 @@
 			children = (
 				24891B7C29B724B500760765 /* ItunesTestTask */,
 				24891B9329B724B900760765 /* ItunesTestTaskTests */,
-				24891B9D29B724B900760765 /* ItunesTestTaskUITests */,
 				24891B7B29B724B500760765 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,13 +92,10 @@
 		24891B7C29B724B500760765 /* ItunesTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				24891B7D29B724B500760765 /* AppDelegate.swift */,
-				24891B7F29B724B500760765 /* SceneDelegate.swift */,
+				24891BAD29B7250100760765 /* Controllers */,
 				24891B8129B724B500760765 /* ViewController.swift */,
-				24891B8329B724B500760765 /* Main.storyboard */,
-				24891B8629B724B800760765 /* Assets.xcassets */,
-				24891B8829B724B800760765 /* LaunchScreen.storyboard */,
-				24891B8B29B724B800760765 /* Info.plist */,
+				24891B7F29B724B500760765 /* SceneDelegate.swift */,
+				24891BAE29B7256400760765 /* Resorces */,
 			);
 			path = ItunesTestTask;
 			sourceTree = "<group>";
@@ -118,13 +108,23 @@
 			path = ItunesTestTaskTests;
 			sourceTree = "<group>";
 		};
-		24891B9D29B724B900760765 /* ItunesTestTaskUITests */ = {
+		24891BAD29B7250100760765 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				24891B9E29B724B900760765 /* ItunesTestTaskUITests.swift */,
-				24891BA029B724B900760765 /* ItunesTestTaskUITestsLaunchTests.swift */,
 			);
-			path = ItunesTestTaskUITests;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		24891BAE29B7256400760765 /* Resorces */ = {
+			isa = PBXGroup;
+			children = (
+				24891B7D29B724B500760765 /* AppDelegate.swift */,
+				24891B8B29B724B800760765 /* Info.plist */,
+				24891B8829B724B800760765 /* LaunchScreen.storyboard */,
+				24891B8629B724B800760765 /* Assets.xcassets */,
+			);
+			name = Resorces;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +233,6 @@
 			files = (
 				24891B8A29B724B800760765 /* LaunchScreen.storyboard in Resources */,
 				24891B8729B724B800760765 /* Assets.xcassets in Resources */,
-				24891B8529B724B500760765 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24891B9F29B724B900760765 /* ItunesTestTaskUITests.swift in Sources */,
-				24891BA129B724B900760765 /* ItunesTestTaskUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +294,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		24891B8329B724B500760765 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24891B8429B724B500760765 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		24891B8829B724B800760765 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,12 +428,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C86U37WWL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ItunesTestTask/Info.plist;
+				INFOPLIST_FILE = "/Users/vladlenskukjans/Desktop/My iOS Apps/ItunesTestTask/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,12 +455,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5C86U37WWL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ItunesTestTask/Info.plist;
+				INFOPLIST_FILE = "/Users/vladlenskukjans/Desktop/My iOS Apps/ItunesTestTask/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeRight;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
