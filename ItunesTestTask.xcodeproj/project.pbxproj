@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24209B0529E6B34F00EF8909 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0429E6B34F00EF8909 /* SignUpViewController.swift */; };
+		24209B0729E6B37700EF8909 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0629E6B37700EF8909 /* AlbumsViewController.swift */; };
+		24209B0929E6B39600EF8909 /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0829E6B39600EF8909 /* DetailAlbumViewController.swift */; };
+		24209B0B29E6B3CC00EF8909 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0A29E6B3CC00EF8909 /* UserInfoViewController.swift */; };
+		24209B0E29E6B42500EF8909 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0D29E6B42500EF8909 /* AlbumsTableViewCell.swift */; };
+		24209B1029E6B43D00EF8909 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24209B0F29E6B43D00EF8909 /* SongsCollectionViewCell.swift */; };
 		24891B7E29B724B500760765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B7D29B724B500760765 /* AppDelegate.swift */; };
 		24891B8029B724B500760765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B7F29B724B500760765 /* SceneDelegate.swift */; };
-		24891B8229B724B500760765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B8129B724B500760765 /* ViewController.swift */; };
+		24891B8229B724B500760765 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B8129B724B500760765 /* AuthViewController.swift */; };
 		24891B8729B724B800760765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8629B724B800760765 /* Assets.xcassets */; };
 		24891B8A29B724B800760765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8829B724B800760765 /* LaunchScreen.storyboard */; };
 		24891B9529B724B900760765 /* ItunesTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B9429B724B900760765 /* ItunesTestTaskTests.swift */; };
@@ -33,10 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24209B0429E6B34F00EF8909 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		24209B0629E6B37700EF8909 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		24209B0829E6B39600EF8909 /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
+		24209B0A29E6B3CC00EF8909 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		24209B0D29E6B42500EF8909 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
+		24209B0F29E6B43D00EF8909 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
 		24891B7A29B724B500760765 /* ItunesTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24891B7D29B724B500760765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24891B7F29B724B500760765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		24891B8129B724B500760765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24891B8129B724B500760765 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		24891B8629B724B800760765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24891B8929B724B800760765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24891B8B29B724B800760765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -70,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24209B0C29E6B3FA00EF8909 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24209B0D29E6B42500EF8909 /* AlbumsTableViewCell.swift */,
+				24209B0F29E6B43D00EF8909 /* SongsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		24891B7129B724B500760765 = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +113,8 @@
 		24891B7C29B724B500760765 /* ItunesTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				24209B0C29E6B3FA00EF8909 /* Cells */,
 				24891BAD29B7250100760765 /* Controllers */,
-				24891B8129B724B500760765 /* ViewController.swift */,
-				24891B7F29B724B500760765 /* SceneDelegate.swift */,
 				24891BAE29B7256400760765 /* Resorces */,
 			);
 			path = ItunesTestTask;
@@ -111,6 +131,11 @@
 		24891BAD29B7250100760765 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24891B8129B724B500760765 /* AuthViewController.swift */,
+				24209B0429E6B34F00EF8909 /* SignUpViewController.swift */,
+				24209B0629E6B37700EF8909 /* AlbumsViewController.swift */,
+				24209B0829E6B39600EF8909 /* DetailAlbumViewController.swift */,
+				24209B0A29E6B3CC00EF8909 /* UserInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -118,6 +143,7 @@
 		24891BAE29B7256400760765 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				24891B7F29B724B500760765 /* SceneDelegate.swift */,
 				24891B7D29B724B500760765 /* AppDelegate.swift */,
 				24891B8B29B724B800760765 /* Info.plist */,
 				24891B8829B724B800760765 /* LaunchScreen.storyboard */,
@@ -257,9 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24891B8229B724B500760765 /* ViewController.swift in Sources */,
+				24891B8229B724B500760765 /* AuthViewController.swift in Sources */,
+				24209B0B29E6B3CC00EF8909 /* UserInfoViewController.swift in Sources */,
+				24209B0929E6B39600EF8909 /* DetailAlbumViewController.swift in Sources */,
+				24209B0E29E6B42500EF8909 /* AlbumsTableViewCell.swift in Sources */,
 				24891B7E29B724B500760765 /* AppDelegate.swift in Sources */,
+				24209B1029E6B43D00EF8909 /* SongsCollectionViewCell.swift in Sources */,
+				24209B0529E6B34F00EF8909 /* SignUpViewController.swift in Sources */,
 				24891B8029B724B500760765 /* SceneDelegate.swift in Sources */,
+				24209B0729E6B37700EF8909 /* AlbumsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
