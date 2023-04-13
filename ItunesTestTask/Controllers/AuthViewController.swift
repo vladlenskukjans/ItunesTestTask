@@ -32,6 +32,8 @@ class AuthViewController: UIViewController {
     private let emailTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.placeholder = "Enter email"
         return textField
     }()
@@ -68,7 +70,7 @@ class AuthViewController: UIViewController {
     
     private var textFieldsStackView = UIStackView()
     private var buttonsStackView = UIStackView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,12 +78,15 @@ class AuthViewController: UIViewController {
         setupDelegate()
         setConstraints()
         registerKeyboardNotification()
+        
+        
+        
     }
     
     deinit {
         removeKeyboardNotification()
     }
-
+    
     private func setupViews() {
         title = "SignIn"
         view.backgroundColor = .white
@@ -92,9 +97,9 @@ class AuthViewController: UIViewController {
                                           distribution: .fillProportionally)
         
         buttonsStackView = UIStackView(arrangedSubviews: [signInButton, signUpButton],
-                                             axis: .horizontal,
-                                             spacing: 10,
-                                             distribution: .fillEqually)
+                                       axis: .horizontal,
+                                       spacing: 10,
+                                       distribution: .fillEqually)
         
         view.addSubview(scrollView)
         scrollView.addSubview(backgroundView)
@@ -115,9 +120,43 @@ class AuthViewController: UIViewController {
     }
     
     @objc private func signInButtonTapped() {
-        let navVC = UINavigationController(rootViewController: AlbumsViewController())
-        navVC.modalPresentationStyle = .fullScreen
-        self.present(navVC, animated: true)
+        
+        let mail = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        let user = findUserDataBase(mail: mail)
+        
+        if user == nil {
+            loginLabel.text = "User not found"
+            loginLabel.textColor = .red
+            
+        } else if user?.password == password {
+            
+            let navVC = UINavigationController(rootViewController: AlbumsViewController())
+            navVC.modalPresentationStyle = .fullScreen
+            self.present(navVC, animated: true)
+            
+            guard let activeUser = user else {return}
+            DataBase.shared.saveActiveUser(user: activeUser)
+            
+        } else {
+            loginLabel.text = "Wrong password"
+            loginLabel.textColor = .red
+        }
+        
+        
+        
+    }
+    // checking user in our database, true email existance
+     private func findUserDataBase(mail: String) -> Users? {
+            let dataBase = DataBase.shared.users
+            print(dataBase)
+         
+         for user in dataBase {
+             if user.email == mail {
+                 return user
+             }
+         }
+         return nil
     }
 }
 

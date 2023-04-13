@@ -29,7 +29,6 @@ extension String {
         var regex = ""
         
         switch validType {
-            
         case .name:
             regex = Regex.name.rawValue
         case .email:

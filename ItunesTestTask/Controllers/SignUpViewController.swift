@@ -88,6 +88,8 @@ class SignUpViewController: UIViewController {
     private let emailTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.placeholder = "E-mail"
         return textField
     }()
@@ -196,7 +198,28 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func signUpButtonTapped() {
-        print("SignUpTap")
+        
+        let firstNameText = firstNameTextField.text ?? ""
+        let secondNameText = secondNameTextField.text ?? ""
+        let emailTextField = emailTextField.text ?? ""
+        let passwordText = passwordTextField.text ?? ""
+        let photeText = phoneNumberTextField.text ?? ""
+        
+        if firstNameText.isValid(validType: nameValidType) &&
+            secondNameText.isValid(validType: nameValidType) &&
+            emailTextField.isValid(validType: emailValidType) &&
+            passwordText.isValid(validType: passwordValidType) &&
+            photeText.count == 19 &&
+            ageIsValid() == true {
+            
+            DataBase.shared.saveUser(firstName: firstNameText, secondName: secondNameText, phone: photeText, email: emailTextField, password: passwordText, age: datePicker.date)
+            
+            loginLabel.text = "Registration Complite"
+            alertMessage(title: "Success", message: "Registration is Complite")
+        } else {
+            loginLabel.text = "Registration"
+            alertMessage(title: "Error", message: "Fill in all fields and try again, your age must be 18+")
+        }
     }
     
     
