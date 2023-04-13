@@ -76,6 +76,25 @@ class AlbumsTableViewCell: UITableViewCell {
     
     
     func configureAlbumCell(with album: Album) {
+        // we are trying to get image from data, and asign to out album logo image
+        if let urlString = album.artworkUrl100 {
+            NetworkRequest.shared.dataRequest(urlString: urlString) { [weak self] result in
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        let image = UIImage(data: data)
+                        self?.albumLogo.image = image
+                    }
+                  // let image = UIImage(data: data)
+                  
+                case .failure(let error):
+                    self?.albumLogo.image = nil
+                    print(error.localizedDescription)
+                }
+            }
+              } else {
+            albumLogo.image = nil
+        }
         albumNameLabel.text = album.collectionName
         artistNameLabel.text = album.artistName
         trackCountLabel.text = "\(album.trackCount) tracks"

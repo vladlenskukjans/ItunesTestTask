@@ -73,13 +73,22 @@ class AlbumsViewController: UIViewController {
             
             guard  error == nil, let albumModel = albumModel else {
                 print(error?.localizedDescription as Any)
-                
                 return }
-            self?.albums = albumModel.results
-           // print(self?.albums)
-            self?.tableView.reloadData()
+            
+            if albumModel.results != [] {
+                // sorting by album A to Z
+                let sortedAlbum = albumModel.results.sorted { firstItem, secondItem in
+                    return firstItem.collectionName.compare(secondItem.collectionName) == ComparisonResult.orderedAscending
+                }
+                self?.albums = sortedAlbum
+               // print(self?.albums)
+                self?.tableView.reloadData()
+                
+            } else {
+                
+                self?.alertMessage(title: "Error", message: "Album not found. Add some Text")
+            }
         }
-        
     }
 }
 
@@ -107,8 +116,10 @@ extension AlbumsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
         let detailAlbumViewController = DetailAlbumViewController()
+        let album = albums[indexPath.row]
+        detailAlbumViewController.album = album // we are passing data to DetailVC , to the next screen
+        detailAlbumViewController.title = album.artistName
         navigationController?.pushViewController(detailAlbumViewController, animated: true)
     }
 }
@@ -117,11 +128,13 @@ extension AlbumsViewController: UITableViewDelegate {
 
 extension AlbumsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // this line allow us write with russian leanguege text , in our search text field
+        guard let text = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
           
-        if searchText != "" {
+        if text != "" {
             timer?.invalidate()
             timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
-                self?.fetchAlbums(albumeName: searchText)
+                self?.fetchAlbums(albumeName: text)
             })
         }
     }

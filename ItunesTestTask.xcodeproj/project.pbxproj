@@ -28,6 +28,7 @@
 		248F998B29E8363100B4AD20 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F998A29E8363100B4AD20 /* AlbumModel.swift */; };
 		248F998E29E83AD200B4AD20 /* NetworkRequest .swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F998D29E83AD200B4AD20 /* NetworkRequest .swift */; };
 		248F999029E8416D00B4AD20 /* NetworkFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F998F29E8416D00B4AD20 /* NetworkFetchData.swift */; };
+		248F999229E8995D00B4AD20 /* SongsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F999129E8995D00B4AD20 /* SongsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		248F998A29E8363100B4AD20 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		248F998D29E83AD200B4AD20 /* NetworkRequest .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest .swift"; sourceTree = "<group>"; };
 		248F998F29E8416D00B4AD20 /* NetworkFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchData.swift; sourceTree = "<group>"; };
+		248F999129E8995D00B4AD20 /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				24209B1B29E7EF6F00EF8909 /* UserModels.swift */,
 				248F998A29E8363100B4AD20 /* AlbumModel.swift */,
+				248F999129E8995D00B4AD20 /* SongsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				24209B1029E6B43D00EF8909 /* SongsCollectionViewCell.swift in Sources */,
 				24209B1529E6B56200EF8909 /* UIViewController+Extens.swift in Sources */,
 				24209B0529E6B34F00EF8909 /* SignUpViewController.swift in Sources */,
+				248F999229E8995D00B4AD20 /* SongsModel.swift in Sources */,
 				248F998B29E8363100B4AD20 /* AlbumModel.swift in Sources */,
 				248F998E29E83AD200B4AD20 /* NetworkRequest .swift in Sources */,
 				24891B8029B724B500760765 /* SceneDelegate.swift in Sources */,
