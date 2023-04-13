@@ -18,6 +18,9 @@ class AlbumsViewController: UIViewController {
     }()
     
     private let searchController = UISearchController(searchResultsController: nil)
+    
+    var albums = [Album]()
+    var timer: Timer?
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,8 @@ class AlbumsViewController: UIViewController {
         setConstraints()
         setNavigationBar()
         setupSearchController()
+        
+       
     }
 
     private func setupViews() {
@@ -60,18 +65,35 @@ class AlbumsViewController: UIViewController {
         navigationController?.pushViewController(userInfoViewController, animated: true)
 
     }
+    //fetching data
+    private func fetchAlbums(albumeName: String) {
+        let stringURL = "https://itunes.apple.com/search?term=\(albumeName)&entity=album&attribute=albumTerm"
+        
+        NetworkFetchData.shared.fetchAlbums(urlString: stringURL) { [weak self] albumModel, error in
+            
+            guard  error == nil, let albumModel = albumModel else {
+                print(error?.localizedDescription as Any)
+                
+                return }
+            self?.albums = albumModel.results
+           // print(self?.albums)
+            self?.tableView.reloadData()
+        }
+        
+    }
 }
 
 //MARK: - UITableViewDataSource
 
 extension AlbumsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        albums.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard  let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AlbumsTableViewCell else { return UITableViewCell()}
-        
+        let albums = albums[indexPath.row]
+        cell.configureAlbumCell(with: albums)
         return cell
     }
 }
@@ -85,6 +107,7 @@ extension AlbumsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
         let detailAlbumViewController = DetailAlbumViewController()
         navigationController?.pushViewController(detailAlbumViewController, animated: true)
     }
@@ -95,7 +118,12 @@ extension AlbumsViewController: UITableViewDelegate {
 extension AlbumsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
           
-        print(searchText)
+        if searchText != "" {
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
+                self?.fetchAlbums(albumeName: searchText)
+            })
+        }
     }
 }
 
@@ -104,7 +132,6 @@ extension AlbumsViewController: UISearchBarDelegate {
 extension AlbumsViewController {
     
     private func setConstraints() {
-        
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),

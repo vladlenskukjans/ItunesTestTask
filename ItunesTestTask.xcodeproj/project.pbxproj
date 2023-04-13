@@ -25,6 +25,9 @@
 		24891B8729B724B800760765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8629B724B800760765 /* Assets.xcassets */; };
 		24891B8A29B724B800760765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24891B8829B724B800760765 /* LaunchScreen.storyboard */; };
 		24891B9529B724B900760765 /* ItunesTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24891B9429B724B900760765 /* ItunesTestTaskTests.swift */; };
+		248F998B29E8363100B4AD20 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F998A29E8363100B4AD20 /* AlbumModel.swift */; };
+		248F998E29E83AD200B4AD20 /* NetworkRequest .swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F998D29E83AD200B4AD20 /* NetworkRequest .swift */; };
+		248F999029E8416D00B4AD20 /* NetworkFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F998F29E8416D00B4AD20 /* NetworkFetchData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		24891B9029B724B900760765 /* ItunesTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24891B9429B724B900760765 /* ItunesTestTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesTestTaskTests.swift; sourceTree = "<group>"; };
 		24891B9A29B724B900760765 /* ItunesTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		248F998A29E8363100B4AD20 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		248F998D29E83AD200B4AD20 /* NetworkRequest .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest .swift"; sourceTree = "<group>"; };
+		248F998F29E8416D00B4AD20 /* NetworkFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				24209B1B29E7EF6F00EF8909 /* UserModels.swift */,
+				248F998A29E8363100B4AD20 /* AlbumModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 				24209B0C29E6B3FA00EF8909 /* Cells */,
 				24891BAD29B7250100760765 /* Controllers */,
 				24209B1A29E7EF3000EF8909 /* Models */,
+				248F998C29E83ABB00B4AD20 /* Networking */,
 				24209B1129E6B4FE00EF8909 /* Extnsions */,
 				24891BAE29B7256400760765 /* Resorces */,
 			);
@@ -185,6 +193,15 @@
 			);
 			name = Resorces;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		248F998C29E83ABB00B4AD20 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				248F998D29E83AD200B4AD20 /* NetworkRequest .swift */,
+				248F998F29E8416D00B4AD20 /* NetworkFetchData.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24891B8229B724B500760765 /* AuthViewController.swift in Sources */,
+				248F999029E8416D00B4AD20 /* NetworkFetchData.swift in Sources */,
 				24209B1E29E804CD00EF8909 /* AlertMessage.swift in Sources */,
 				24209B0B29E6B3CC00EF8909 /* UserInfoViewController.swift in Sources */,
 				24209B0929E6B39600EF8909 /* DetailAlbumViewController.swift in Sources */,
@@ -330,6 +348,8 @@
 				24209B1029E6B43D00EF8909 /* SongsCollectionViewCell.swift in Sources */,
 				24209B1529E6B56200EF8909 /* UIViewController+Extens.swift in Sources */,
 				24209B0529E6B34F00EF8909 /* SignUpViewController.swift in Sources */,
+				248F998B29E8363100B4AD20 /* AlbumModel.swift in Sources */,
+				248F998E29E83AD200B4AD20 /* NetworkRequest .swift in Sources */,
 				24891B8029B724B500760765 /* SceneDelegate.swift in Sources */,
 				24209B0729E6B37700EF8909 /* AlbumsViewController.swift in Sources */,
 			);
